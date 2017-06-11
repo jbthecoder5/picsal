@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'photos/index'
+  
+  root 'photos#index'
 
-  get 'photos/new'
+  get '/photos/new' => 'photos#new'
+  post '/photos/new' => 'photos#create'
 
-  get 'photos/create'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
