@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # added gems to app
 gem "paperclip", "~> 5.0.0"
 gem 'pg'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 
 
