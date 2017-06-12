@@ -11,9 +11,9 @@ class PhotosController < ApplicationController
   	@photo = Photo.new(post_params)
 
   	if @photo.save
-  		redirect_to root_url
+  		redirect_to root_url, notice: 'Photo Upload successful'
     else
-      redirect_to root_url, notice: 'File upload error'
+      redirect_to root_url, alert: 'Photo upload error'
     end
   end
 
@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
   private
 
   def post_params
-  	require(:photo).permit(:name, :description)
+  	params.require(:photo).permit(:name, :description, :image)
   end
 
 end
