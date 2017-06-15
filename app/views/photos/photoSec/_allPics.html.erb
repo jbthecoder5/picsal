@@ -1,3 +1,17 @@
-<% for i in @photos %>
-	<%= link_to image_tag i.image.url(:medium), class: 'img-circle' %><br>
-<% end %>
+<div class="container">
+	<div class="row">
+	<% for i in @photos %>
+		<div class="col">
+			<div class="card" style="width: 20rem;">
+				<%= link_to image_tag i.image.url(:thumb), class: 'img-circle' %><br>
+				<div class="card-block">
+					<h4 class="card-title"><%= i.name %></h4>
+					<div class="jumbotron">
+						<p class="card-text"><%= i.description %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+	</div>
+</div>
