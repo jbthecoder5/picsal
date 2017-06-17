@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<% for i in @photo %>
+				<% if i.exist? %>
+					<div class="col">
+						<p><%= link_to i.name, i %></p>
+					</div>
+				<% else %>
+					<% render root_url %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

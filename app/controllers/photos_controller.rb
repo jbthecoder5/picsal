@@ -8,6 +8,10 @@ class PhotosController < ApplicationController
   	@photo = Photo.new
   end
 
+  def search
+    @photo = Photo.where("name", params[:search_string])
+  end
+
   def create
   	@photo = Photo.new(post_params)
 

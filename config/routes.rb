@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/photos/new' => 'photos#new'
   post '/photos/new' => 'photos#create'
+  post '/photos/search' => 'photos#search'
 
   
 
