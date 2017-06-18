@@ -4,12 +4,16 @@ class PhotosController < ApplicationController
     @photos.order('asc')
   end
 
-  def new
-  	@photo = Photo.new
+  def show
+    @photo = Photo.find(params[:id])
   end
 
   def search
     @photo = Photo.where("name", params[:search_string])
+  end
+  
+  def new
+  	@photo = Photo.new
   end
 
   def create

@@ -4,10 +4,11 @@
 			<% for i in @photo %>
 				<% if i.exist? %>
 					<div class="col">
-						<p><%= link_to i.name, i %></p>
+						<p><%= link_to image_tag i.image.url(:thumb), class: 'img-circle' %></p>
 					</div>
 				<% else %>
-					<% render root_url %>
+					<% redirect_to root_url, notice: 'Could not find the photo your looking for. 
+					Please try again' %>
 				<% end %>
 			<% end %>
 		</div>
