@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   get '/photos/new' => 'photos#new'
   post '/photos/new' => 'photos#create'
-  get '/photos/:id' => 'photos#show'
   post '/photos/search' => 'photos#search'
+  get 'about', to: 'photos#about', as: 'about'
+  get 'help', to: 'photos#help', as: 'help'
+  get '/photos/:id' => 'photos#show'
 
 
 

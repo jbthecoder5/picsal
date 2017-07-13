@@ -27,6 +27,16 @@ class PhotosController < ApplicationController
   end
 
 
+
+  def about
+
+  end
+
+  def help
+
+  end
+
+
   private
 
   def post_params
