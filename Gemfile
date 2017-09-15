@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.0.0"
 gem 'pg'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'dropzonejs-rails'
 
 
 

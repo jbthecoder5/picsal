@@ -2,6 +2,8 @@ class PhotosController < ApplicationController
   def index
   	@photos = Photo.all
     @photos.order('asc')
+
+    @photo = Photo.new
   end
 
   def show

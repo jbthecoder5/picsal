@@ -1,1 +1,25 @@
-<div id="drop_zone" ondrop="drag_drop(event)" ondragover="return false"></div>
+<div id="content">
+	<%= form_for(:photo) do |f| %>
+		<div class="dropzone" id="drop_zone my-dropzone" ondrop="drag_drop(event)" ondragover="return false">
+			<div class="dz-message needsclick">
+				<h3>Drop file here</h3> or
+				<strong>click</strong> to upload
+			</div>
+
+			<div class="form-group">
+				<%= f.label :name %>
+				<%= f.text_field :name, class: 'form-control', id: 'file-name' %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label :description %>
+				<%= f.text_field :description, class: 'form-control', id: 'file-description' %>
+			</div>
+
+			<div class="fallback">
+				<%= f.file_field :image, id: 'file-img' %>
+				<%= f.submit "Upload the Image" %>
+			</div>
+		</div>
+	<% end %>
+</div>
